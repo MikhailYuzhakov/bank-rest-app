@@ -1,0 +1,330 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: yuzhakovmikhail
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: role_name
+                  value: "ADMIN"
+
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: role_name
+                  value: "USER"
+
+  - changeSet:
+      id: 5
+      author: yuzhakovmikhail
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: first_name
+                  value: "Михаил"
+              - column:
+                  name: last_name
+                  value: "Южаков"
+              - column:
+                  name: middle_name
+                  value: "Александрович"
+              - column:
+                  name: username
+                  value: "yuzhakov"
+              - column:
+                 name: password
+                 value: "$2a$08$K9HF4BUll7RLVkPTARJKOOytjEQ.5W7lS0fQeiP8Ehg4FtFgkbcZG"
+              - column:
+                  name: role_id
+                  value: 1
+
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: first_name
+                  value: "Анна"
+              - column:
+                  name: last_name
+                  value: "Иванова"
+              - column:
+                  name: middle_name
+                  value: "Сергеевна"
+              - column:
+                  name: username
+                  value: "ivanova"
+              - column:
+                  name: password
+                  value: "$2a$08$K9HF4BUll7RLVkPTARJKOOytjEQ.5W7lS0fQeiP8Ehg4FtFgkbcZG"
+              - column:
+                  name: role_id
+                  value: 2
+
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: first_name
+                  value: "Дмитрий"
+              - column:
+                  name: last_name
+                  value: "Петров"
+              - column:
+                  name: middle_name
+                  value: "Владимирович"
+              - column:
+                  name: username
+                  value: "petrov"
+              - column:
+                  name: password
+                  value: "$2a$08$K9HF4BUll7RLVkPTARJKOOytjEQ.5W7lS0fQeiP8Ehg4FtFgkbcZG"
+              - column:
+                  name: role_id
+                  value: 2
+
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: first_name
+                  value: "Елена"
+              - column:
+                  name: last_name
+                  value: "Смирнова"
+              - column:
+                  name: middle_name
+                  value: "Андреевна"
+              - column:
+                  name: username
+                  value: "smirnova"
+              - column:
+                  name: password
+                  value: "$2a$08$K9HF4BUll7RLVkPTARJKOOytjEQ.5W7lS0fQeiP8Ehg4FtFgkbcZG"
+              - column:
+                  name: role_id
+                  value: 2
+
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: first_name
+                  value: "Сергей"
+              - column:
+                  name: last_name
+                  value: "Кузнецов"
+              - column:
+                  name: middle_name
+                  value: "Николаевич"
+              - column:
+                  name: username
+                  value: "kuznetsov"
+              - column:
+                  name: password
+                  value: "$2a$08$K9HF4BUll7RLVkPTARJKOOytjEQ.5W7lS0fQeiP8Ehg4FtFgkbcZG"
+              - column:
+                  name: role_id
+                  value: 2
+
+  - changeSet:
+      id: 6
+      author: yuzhakovmikhail
+      changes:
+        - insert:
+            tableName: bank_cards
+            columns:
+              - column:
+                  name: masked_card_number
+                  value: "**** **** **** 0490"
+              - column:
+                  name: encrypted_card_number
+                  value: "gy+Nd1XcGsXcUM/Vo0myconddAFWEZtM1pakuG/V7Tf9rD60I5jrm19z8JFY2rAm"
+              - column:
+                  name: expiration_date
+                  value: "2026-05-25"
+              - column:
+                  name: status
+                  value: "ACTIVE"
+              - column:
+                  name: balance
+                  value: 15000.00
+              - column:
+                  name: user_id
+                  value: 2
+
+        - insert:
+            tableName: bank_cards
+            columns:
+              - column:
+                  name: masked_card_number
+                  value: "**** **** **** 3266"
+              - column:
+                  name: encrypted_card_number
+                  value: "gy+Nd1XcGsXcUM/Vo0mycgQfPSn8UX2M70EZBwyiNI71hSwOHJfhM74m3xkAJAoy"
+              - column:
+                  name: expiration_date
+                  value: "2026-05-25"
+              - column:
+                  name: status
+                  value: "ACTIVE"
+              - column:
+                  name: balance
+                  value: 8500.50
+              - column:
+                  name: user_id
+                  value: 3
+
+        - insert:
+            tableName: bank_cards
+            columns:
+              - column:
+                  name: masked_card_number
+                  value: "**** **** **** 3076"
+              - column:
+                  name: encrypted_card_number
+                  value: "gy+Nd1XcGsXcUM/Vo0mycljFHFjGoMp3WWjU1edm5mEBGg2IkT84wiNBYYJ7FTkb"
+              - column:
+                  name: expiration_date
+                  value: "2026-05-25"
+              - column:
+                  name: status
+                  value: "ACTIVE"
+              - column:
+                  name: balance
+                  value: 1200.00
+              - column:
+                  name: user_id
+                  value: 3
+
+        - insert:
+            tableName: bank_cards
+            columns:
+              - column:
+                  name: masked_card_number
+                  value: "**** **** **** 5086"
+              - column:
+                  name: encrypted_card_number
+                  value: "gy+Nd1XcGsXcUM/Vo0mycmZZu4CaWulmh+atvUfs17Z3SO8uEUNCTM0BgzrHe/K5"
+              - column:
+                  name: expiration_date
+                  value: "2026-05-25"
+              - column:
+                  name: status
+                  value: "ACTIVE"
+              - column:
+                  name: balance
+                  value: 500.75
+              - column:
+                  name: user_id
+                  value: 2
+
+        - insert:
+            tableName: bank_cards
+            columns:
+              - column:
+                  name: masked_card_number
+                  value: "**** **** **** 3214"
+              - column:
+                  name: encrypted_card_number
+                  value: "gy+Nd1XcGsXcUM/Vo0myclIiXlNjIOJeZKcRN9UDTChQbXkuWpu4HyIUZrPHzbP2"
+              - column:
+                  name: expiration_date
+                  value: "2026-05-25"
+              - column:
+                  name: status
+                  value: "ACTIVE"
+              - column:
+                  name: balance
+                  value: 25000.00
+              - column:
+                  name: user_id
+                  value: 4
+        - insert:
+            tableName: bank_cards
+            columns:
+              - column:
+                  name: masked_card_number
+                  value: "**** **** **** 1254"
+              - column:
+                  name: encrypted_card_number
+                  value: "gy+Nd1XcGsXcUM/Vo0mycjHxDj9LktiAEo0T6jJiVVyn7b7JCaeS3XYKKtu9JnnK"
+              - column:
+                  name: expiration_date
+                  value: "2026-05-25"
+              - column:
+                  name: status
+                  value: "ACTIVE"
+              - column:
+                  name: balance
+                  value: 1000.00
+              - column:
+                  name: user_id
+                  value: 4
+        - insert:
+            tableName: bank_cards
+            columns:
+              - column:
+                  name: masked_card_number
+                  value: "**** **** **** 6470"
+              - column:
+                  name: encrypted_card_number
+                  value: "gy+Nd1XcGsXcUM/Vo0mycuSK9LLpceCiefMk2pDAbmNX212/Aoms46yDnRKi14GS"
+              - column:
+                  name: expiration_date
+                  value: "2026-05-25"
+              - column:
+                  name: status
+                  value: "ACTIVE"
+              - column:
+                  name: balance
+                  value: 1040.00
+              - column:
+                  name: user_id
+                  value: 5
+        - insert:
+            tableName: bank_cards
+            columns:
+              - column:
+                  name: masked_card_number
+                  value: "**** **** **** 9573"
+              - column:
+                  name: encrypted_card_number
+                  value: "gy+Nd1XcGsXcUM/Vo0myckCbPeeB6R3Z8euYzWuQ80kfYDjMrOl+wz+45ob+mZWO"
+              - column:
+                  name: expiration_date
+                  value: "2026-05-25"
+              - column:
+                  name: status
+                  value: "ACTIVE"
+              - column:
+                  name: balance
+                  value: 1140.00
+              - column:
+                  name: user_id
+                  value: 5

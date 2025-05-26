@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: bank_rest
+
+  datasource:
+    url: jdbc:postgresql://bank-rest-db:5432/postgres
+    username: postgres
+    password: "10031998"
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        ddl-auto: none
+
+  server:
+    port: 8080
+
+liquibase:
+  enabled: true
+  change-log: classpath:db/changelog/db.changelog-master.yaml
+  url: jdbc:postgresql://bank-rest-db:5432/postgres
+  username: postgres
+  password: "10031998"
+
+jwt:
+  secret-key: d3f8a7bb9ab6f1429d1322bb5662172303dac0f231ccd800 # Рекомендуется 32+ символа
+  validity: 86400000 # 24 часа в миллисекундах
+  issuer: bank-rest
+
+encryptor:
+  secretKey: d3f8a7bb9ab6f1429d1322bb5662172303dac0f231c
